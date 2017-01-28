@@ -1,8 +1,12 @@
 package com.second.part.customlibrary;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.second.part.customlibrary.activity.customactivity.CustomToolbarActivity;
+import com.second.part.customlibrary.activity.list.ListActivity;
 
 public class MainActivity extends CustomToolbarActivity {
 
@@ -22,6 +26,14 @@ public class MainActivity extends CustomToolbarActivity {
     @Override
     protected void initViews() {
         super.initViews();
+        Button movie = (Button) findViewById(R.id.listButton);
+        movie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ListActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
 }
