@@ -44,6 +44,5 @@ public class Holder extends RecyclerView.ViewHolder {
 
         mTextView1.setText(text1);
         mTextView2.setText(Integer.toString(tvShow.getStartYear()));
-
     }
 }

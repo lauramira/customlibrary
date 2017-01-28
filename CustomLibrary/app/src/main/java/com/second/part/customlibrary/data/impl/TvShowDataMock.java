@@ -19,11 +19,15 @@ public class TvShowDataMock implements TvShowData {
 
     public TvShowDataMock(){
         list = new ArrayList<>(Arrays.asList(
-                new TvShow("Movie 1", 2001, 1),
-                new TvShow("Movie 2", 2002, 2),
-                new TvShow("Movie 3", 2002, 4),
-                new TvShow("Movie 4", 2002, 1),
-                new TvShow("Movie 5", 2002, 5)
+                new TvShow("TV Show 1", 2001, 1),
+                new TvShow("TV Show 2", 2002, 2),
+                new TvShow("TV Show 3", 2003, 4),
+                new TvShow("TV Show 4", 2004, 1),
+                new TvShow("TV Show 5", 2005, 5),
+                new TvShow("TV Show 6", 2006, 1),
+                new TvShow("TV Show 7", 2007, 3),
+                new TvShow("TV Show 8", 2008, 1),
+                new TvShow("TV Show 9", 2009, 5)
         ));
     }
 

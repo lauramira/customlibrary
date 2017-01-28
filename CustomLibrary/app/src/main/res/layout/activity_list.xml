@@ -9,25 +9,6 @@
 
     <include layout="@layout/toolbar"></include>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/moviebuttonchange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="film" />
-
-        <Button
-            android:id="@+id/tvshowbuttonchange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="tvshow" />
-
-    </LinearLayout>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/activity_library_list_recycler_view"
         android:layout_width="match_parent"

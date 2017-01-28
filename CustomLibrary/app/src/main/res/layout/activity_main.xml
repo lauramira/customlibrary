@@ -20,14 +20,16 @@
             android:id="@+id/createButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/create_button"/>
+            android:text="@string/create_button"
+            style="@style/ButtonStyle"/>
 
         <Button
             android:id="@+id/listButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/list_button"/>
-    </LinearLayout>
+            android:text="@string/list_button"
+            style="@style/ButtonStyle"/>
 
+    </LinearLayout>
 
 </LinearLayout>
