@@ -11,4 +11,5 @@
 
     <dimen name="text_view_recycler_view_item_size_large">25dp</dimen>
     <dimen name="text_view_recycler_view_item_size_medium">15dp</dimen>
+    <dimen name="activity_padding">10dp</dimen>
 </resources>

@@ -31,4 +31,11 @@ public class LibraryManager {
         return tvShowData.getAll();
     }
 
+    public void createMovie(Movie movie){
+        movieData.create(movie);
+    }
+
+    public void createTvShow(TvShow tvShow){
+        tvShowData.create(tvShow);
+    }
 }

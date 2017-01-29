@@ -35,8 +35,6 @@ public class CreateTvShowFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_create_tv_show, container, false);
-        TextView textView = (TextView) view.findViewById(R.id.tvshow_Create);
-        textView.setText("Fragment " + tabName);
         return view;
     }
 }

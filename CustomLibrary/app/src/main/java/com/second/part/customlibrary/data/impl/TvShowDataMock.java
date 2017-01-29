@@ -25,9 +25,7 @@ public class TvShowDataMock implements TvShowData {
                 new TvShow("TV Show 4", 2004, 1),
                 new TvShow("TV Show 5", 2005, 5),
                 new TvShow("TV Show 6", 2006, 1),
-                new TvShow("TV Show 7", 2007, 3),
-                new TvShow("TV Show 8", 2008, 1),
-                new TvShow("TV Show 9", 2009, 5)
+                new TvShow("TV Show 7", 2007, 3)
         ));
     }
 

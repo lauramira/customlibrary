@@ -8,8 +8,18 @@
     <string name="list_recycler_item_tvShow_2">%1$s - 2 > seasons</string>
 
     <string name="tab_layout_movies">MOVIES</string>
-    <string name="tab_layout_tv_show">TV SHOWS</string>
+    <string name="tab_layout_tv_shows">TV SHOWS</string>
+    <string name="tab_layout_movie">MOVIE</string>
+    <string name="tab_layout_tv_show">TV SHOW</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_view_movie_name">Movie name</string>
+    <string name="text_view_movie_year">Movie year</string>
+    <string name="text_view_director_name">Director name</string>
+    <string name="text_view_tv_show_seasons">Number of seasons</string>
+    <string name="text_view_tv_show_start_year">Start year</string>
+    <string name="text_view_tv_show_name">Tv show name</string>
+
+    <string name="add_button">Add</string>
+
 </resources>

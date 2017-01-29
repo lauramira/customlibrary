@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.second.part.customlibrary.R;
+import com.second.part.customlibrary.application.CustomApplication;
 import com.second.part.customlibrary.manager.LibraryManager;
 import com.second.part.customlibrary.model.Movie;
 import com.second.part.customlibrary.model.TvShow;
@@ -26,7 +27,7 @@ public class Adapter extends RecyclerView.Adapter<Holder>{
 
     public Adapter(Activity activity) {
         this.mActivity = activity;
-        this.libraryManager = new LibraryManager();
+        this.libraryManager = CustomApplication.getInstance().getLibraryManager();
         this.movies = libraryManager.getAllMovies();
         this.tvShows = libraryManager.getAllTvShows();
         this.listType = 1;

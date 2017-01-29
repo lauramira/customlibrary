@@ -45,7 +45,7 @@ public class ListActivity extends CustomToolbarActivity {
 
     private void initTabLayout(){
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab_layout_movies)));
-        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab_layout_tv_show)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab_layout_tv_shows)));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
