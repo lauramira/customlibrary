@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.second.part.customlibrary.R;
 import com.second.part.customlibrary.activity.customactivity.CustomToolbarActivity;
@@ -46,7 +45,7 @@ public class ListActivity extends CustomToolbarActivity {
 
     private void initTabLayout(){
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab_layout_movies)));
-        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab_layout_films)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab_layout_tv_show)));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
