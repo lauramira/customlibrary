@@ -2,6 +2,7 @@ package com.second.part.customlibrary.activity.list.recycler;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -11,6 +12,9 @@ import com.second.part.customlibrary.manager.LibraryManager;
 import com.second.part.customlibrary.model.Movie;
 import com.second.part.customlibrary.model.TvShow;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -24,6 +28,7 @@ public class Adapter extends RecyclerView.Adapter<Holder>{
     private Integer listType;
     private List<Movie> movies;
     private List<TvShow> tvShows;
+    private static String TAG = "ListActivityAdapter";
 
     public Adapter(Activity activity) {
         this.mActivity = activity;
@@ -65,5 +70,13 @@ public class Adapter extends RecyclerView.Adapter<Holder>{
     public void changeListType(Integer listType){
         this.listType = listType;
         notifyDataSetChanged();
+    }
+
+    public void orderList(String orderBy){
+        if (listType == 1){
+            Log.d(TAG, "order movies by: " + orderBy);
+        } else {
+            Log.d(TAG, "order tv shows by: " + orderBy);
+        }
     }
 }

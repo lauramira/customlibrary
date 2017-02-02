@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.second.part.customlibrary.R;
 import com.second.part.customlibrary.activity.customactivity.CustomToolbarActivity;
@@ -43,6 +45,29 @@ public class ListActivity extends CustomToolbarActivity {
         recyclerView.setAdapter(adapter);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        boolean menuCreated = super.onCreateOptionsMenu(menu);
+
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+
+        menuCreated &= true;
+        return menuCreated;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.option_item_1){
+            adapter.orderList("Name");
+        } else if (item.getItemId() == R.id.option_item_2){
+            adapter.orderList("Year");
+        } else if (item.getItemId() == R.id.option_item_3) {
+            adapter.orderList("Other");
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     private void initTabLayout(){
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab_layout_movies)));
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab_layout_tv_shows)));
@@ -63,4 +88,6 @@ public class ListActivity extends CustomToolbarActivity {
             public void onTabReselected(TabLayout.Tab tab) {}
         });
     }
+
+
 }
