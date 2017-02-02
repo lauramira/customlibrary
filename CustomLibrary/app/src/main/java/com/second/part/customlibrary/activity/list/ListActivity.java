@@ -57,12 +57,13 @@ public class ListActivity extends CustomToolbarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.option_item_1){
-            adapter.orderList("Name");
-        } else if (item.getItemId() == R.id.option_item_2){
-            adapter.orderList("Year");
-        } else if (item.getItemId() == R.id.option_item_3) {
-            adapter.orderList("Other");
+        switch (item.getItemId()){
+            case R.id.option_item_1:
+                adapter.orderList("-");
+                break;
+            case R.id.option_item_2 :
+                adapter.orderList("+");
+                break;
         }
 
         return super.onOptionsItemSelected(item);

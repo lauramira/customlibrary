@@ -15,6 +15,7 @@ import com.second.part.customlibrary.model.TvShow;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -75,8 +76,41 @@ public class Adapter extends RecyclerView.Adapter<Holder>{
     public void orderList(String orderBy){
         if (listType == 1){
             Log.d(TAG, "order movies by: " + orderBy);
+
+            if (orderBy.equals("-")){
+                Collections.sort(movies, new Comparator<Movie>() {
+                    @Override
+                    public int compare(Movie movie1, Movie movie2) {
+                        return movie1.getYear().compareTo(movie2.getYear());
+                    }
+                });
+            } else {
+                Collections.sort(movies, new Comparator<Movie>() {
+                    @Override
+                    public int compare(Movie movie1, Movie movie2) {
+                        return movie2.getYear().compareTo(movie1.getYear());
+                    }
+                });
+            }
+            notifyDataSetChanged();
         } else {
             Log.d(TAG, "order tv shows by: " + orderBy);
+            if (orderBy.equals("-")) {
+                Collections.sort(tvShows, new Comparator<TvShow>() {
+                    @Override
+                    public int compare(TvShow tvShow1, TvShow tvShow2) {
+                        return tvShow1.getStartYear().compareTo(tvShow2.getStartYear());
+                    }
+                });
+            } else {
+                Collections.sort(tvShows, new Comparator<TvShow>() {
+                    @Override
+                    public int compare(TvShow tvShow1, TvShow tvShow2) {
+                        return tvShow2.getStartYear().compareTo(tvShow1.getStartYear());
+                    }
+                });
+            }
+            notifyDataSetChanged();
         }
     }
 }
