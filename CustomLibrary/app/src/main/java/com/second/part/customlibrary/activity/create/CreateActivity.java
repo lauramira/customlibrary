@@ -16,7 +16,6 @@ import com.second.part.customlibrary.manager.LibraryManager;
 public class CreateActivity extends AbstractToolbarActivity{
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private ViewPagerAdapter viewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +32,7 @@ public class CreateActivity extends AbstractToolbarActivity{
         super.initViews();
         tabLayout = (TabLayout) findViewById(R.id.activity_create_tab_layout);
         viewPager = (ViewPager) findViewById(R.id.activity_create_view_pager);
-
-        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), this);
-        viewPager.setAdapter(viewPagerAdapter);
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), this));
         tabLayout.setupWithViewPager(viewPager);
     }
 }

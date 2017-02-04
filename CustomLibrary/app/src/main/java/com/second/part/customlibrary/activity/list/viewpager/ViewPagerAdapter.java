@@ -1,20 +1,19 @@
-package com.second.part.customlibrary.activity.create.viewpager;
+package com.second.part.customlibrary.activity.list.viewpager;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.second.part.customlibrary.R;
-import com.second.part.customlibrary.activity.create.viewpager.fragment.CreateMovieFragment;
-import com.second.part.customlibrary.activity.create.viewpager.fragment.CreateTvShowFragment;
+import com.second.part.customlibrary.activity.list.viewpager.fragment.ListMovieFragment;
+import com.second.part.customlibrary.activity.list.viewpager.fragment.ListTvShowFragment;
 
 /**
- * Created by Usuario on 29/01/2017.
+ * Created by Usuario on 04/02/2017.
  */
 
-public class ViewPagerAdapter extends FragmentPagerAdapter{
+public class ViewPagerAdapter extends FragmentPagerAdapter {
     private final int NUMBER_OF_TABS = 2;
     private final int MOVIE_TAB = 0;
     private final int TV_SHOW_TAB = 1;
@@ -22,17 +21,16 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
 
     public ViewPagerAdapter(FragmentManager fm, AppCompatActivity owner) {
         super(fm);
-        activity = owner;
+        this.activity = owner;
     }
 
     @Override
     public Fragment getItem(int position) {
         switch (position){
-            case MOVIE_TAB:
-                return CreateMovieFragment.newInstance();
-            case TV_SHOW_TAB:
-                return CreateTvShowFragment.newInstance();
+            case MOVIE_TAB: return ListMovieFragment.newInstance();
+            case TV_SHOW_TAB: return ListTvShowFragment.newInstance();
         }
+
         throw new RuntimeException(activity.getString(R.string.tab_layout_error_tab_not_found));
     }
 
@@ -43,11 +41,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public CharSequence getPageTitle(int position) {
+
         switch (position){
             case MOVIE_TAB: return activity.getString(R.string.tab_layout_movies);
-            case TV_SHOW_TAB: return activity.getString(R.string.tab_layout_tv_show);
+            case TV_SHOW_TAB: return activity.getString(R.string.tab_layout_tv_shows);
         }
 
         return super.getPageTitle(position);
+
     }
 }
