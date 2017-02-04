@@ -1,4 +1,4 @@
-package com.second.part.customlibrary.activity.customactivity;
+package com.second.part.customlibrary.activity.astractactivity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,19 +11,17 @@ import com.second.part.customlibrary.R;
  * Created by Usuario on 27/01/2017.
  */
 
-public abstract class CustomToolbarActivity extends AppCompatActivity {
+public abstract class AbstractToolbarActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState, int layoutResourceId) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutResourceId());
+        setContentView(layoutResourceId);
         initViews();
         customizeToolbar();
     }
 
-    protected abstract int getLayoutResourceId();
     protected abstract void customizeToolbar();
 
     protected void initViews(){

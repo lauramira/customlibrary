@@ -6,22 +6,17 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.second.part.customlibrary.R;
-import com.second.part.customlibrary.activity.customactivity.CustomToolbarActivity;
+import com.second.part.customlibrary.activity.astractactivity.AbstractToolbarActivity;
 import com.second.part.customlibrary.activity.list.recycler.Adapter;
 
-public class ListActivity extends CustomToolbarActivity {
+public class ListActivity extends AbstractToolbarActivity {
 
     private Adapter adapter;
     private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    protected int getLayoutResourceId() {
-        return R.layout.activity_list;
+        super.onCreate(savedInstanceState, R.layout.activity_list);
     }
 
     @Override

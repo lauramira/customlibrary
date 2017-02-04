@@ -1,8 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.second.part.customlibrary.activity.create.fragment.CreateTvShowFragment">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,10 +16,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_view_tv_show_name"/>
+                android:text="@string/fragment_create_tv_show_text_view_name"/>
 
             <EditText
-                android:id="@+id/textViewTvShowName"
+                android:id="@+id/fragment_create_tv_show_edit_text_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -35,10 +33,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_view_tv_show_start_year"/>
+                android:text="@string/fragment_create_tv_show_text_view_year"/>
 
             <EditText
-                android:id="@+id/textViewTvShowStartYear"
+                android:id="@+id/fragment_create_tv_show_edit_text_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
@@ -54,16 +52,23 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_view_tv_show_seasons" />
+                android:text="@string/fragment_create_tv_show_text_view_season" />
 
             <EditText
-                android:id="@+id/textViewTvShowSeasons"
+                android:id="@+id/fragment_create_tv_show_edit_text_seasons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:maxLength="3" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/fragment_create_tv_show_button_add"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/fragment_create_tv_show_button_add"
+            style="@style/ButtonStyle"/>
 
     </LinearLayout>
 

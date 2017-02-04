@@ -13,13 +13,19 @@
     <string name="tab_layout_tv_show">TV SHOW</string>
 
 
-    <string name="text_view_movie_name">Movie name</string>
-    <string name="text_view_movie_year">Movie year</string>
-    <string name="text_view_director_name">Director name</string>
-    <string name="text_view_tv_show_seasons">Number of seasons</string>
-    <string name="text_view_tv_show_start_year">Start year</string>
-    <string name="text_view_tv_show_name">Tv show name</string>
+    <string name="fragment_create_movie_text_view_name">Movie name</string>
+    <string name="fragment_create_movie_text_view_year">Movie year</string>
+    <string name="fragment_create_movie_text_view_director">Director name</string>
+    <string name="fragment_create_movie_button_add">Add Movie</string>
 
-    <string name="add_button">Add</string>
+    <string name="fragment_create_tv_show_text_view_name">Tv Show name</string>
+    <string name="fragment_create_tv_show_text_view_year">Start year</string>
+    <string name="fragment_create_tv_show_text_view_season">Number of seasons</string>
+    <string name="fragment_create_tv_show_button_add">Add Tv Show</string>
+
+    <string name="fragment_create_error_empty_fields">There are empty field</string>
+    <string name="fragment_create_error_tab_not_found">Tab not found</string>
+
+
 
 </resources>

@@ -27,7 +27,7 @@ public class Adapter extends RecyclerView.Adapter<Holder>{
 
     public Adapter(Activity activity) {
         this.mActivity = activity;
-        this.libraryManager = CustomApplication.getInstance().getLibraryManager();
+        //this.libraryManager = CustomApplication.getInstance().getLibraryManager();
         this.movies = libraryManager.getAllMovies();
         this.tvShows = libraryManager.getAllTvShows();
         this.listType = 1;
