@@ -16,7 +16,6 @@ import com.second.part.customlibrary.activity.list.viewpager.ViewPagerAdapter;
 
 public class ListActivity extends AbstractToolbarActivity {
     private TabLayout tabLayout;
-    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,34 +30,11 @@ public class ListActivity extends AbstractToolbarActivity {
     @Override
     protected void initViews() {
         super.initViews();
+        //TAB LAYOUT
         tabLayout = (TabLayout) findViewById(R.id.activity_list_tab_layout);
-        viewPager = (ViewPager) findViewById(R.id.activity_list_view_pager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.activity_list_view_pager);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), this));
         tabLayout.setupWithViewPager(viewPager);
     }
-
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        boolean menuCreated = super.onCreateOptionsMenu(menu);
-
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-
-        menuCreated &= true;
-        return menuCreated;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.option_item_1:
-                adapter.orderList("-");
-                break;
-            case R.id.option_item_2 :
-                adapter.orderList("+");
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
 
 }

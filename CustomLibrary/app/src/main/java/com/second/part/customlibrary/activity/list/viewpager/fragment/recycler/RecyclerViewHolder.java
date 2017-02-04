@@ -1,8 +1,9 @@
-package com.second.part.customlibrary.activity.list.recycler;
+package com.second.part.customlibrary.activity.list.viewpager.fragment.recycler;
 
 import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.second.part.customlibrary.R;
@@ -10,14 +11,14 @@ import com.second.part.customlibrary.model.Movie;
 import com.second.part.customlibrary.model.TvShow;
 
 /**
- * Created by Usuario on 27/01/2017.
+ * Created by Usuario on 04/02/2017.
  */
 
-public class Holder extends RecyclerView.ViewHolder {
+public class RecyclerViewHolder extends RecyclerView.ViewHolder {
     private TextView mTextView1;
     private TextView mTextView2;
 
-    public Holder(View itemView) {
+    public RecyclerViewHolder(View itemView) {
         super(itemView);
         mTextView1 = (TextView) itemView.findViewById(R.id.listRecyclerItemTextView1);
         mTextView2 = (TextView) itemView.findViewById(R.id.listRecyclerItemTextView2);
