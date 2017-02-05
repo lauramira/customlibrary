@@ -38,4 +38,12 @@ public class LibraryManager {
     public void createTvShow(TvShow tvShow){
         tvShowData.create(tvShow);
     }
+
+    public List<Movie> sortMovies(List<Movie> movies, int optionSelected){
+       return movieData.sortData(movies, optionSelected);
+    }
+
+    public List<TvShow> sortTvShows(List<TvShow> tvShows, int optionSelected){
+        return tvShowData.sortData(tvShows, optionSelected);
+    }
 }

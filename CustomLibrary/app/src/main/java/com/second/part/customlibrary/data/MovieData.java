@@ -11,4 +11,5 @@ import java.util.List;
 public interface MovieData {
     List<Movie> getAll();
     void create(Movie movie);
+    List<Movie> sortData(List<Movie> movies, int optionSelected);
 }

@@ -26,8 +26,20 @@
 
     <string name="fragment_create_error_empty_fields">There are empty field</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_list_movie_menu_item_name_a_to_z">Name, A-Z</string>
+    <string name="fragment_list_movie_menu_item_name_z_to_a">Name, Z-A</string>
+    <string name="fragment_list_movie_menu_item_year_old_to_new">Year, old to new</string>
+    <string name="fragment_list_movie_menu_item_year_new_to_old">Year, new to old</string>
+    <string name="fragment_list_movie_menu_item_director_a_to_z">Director, A-Z</string>
+    <string name="fragment_list_movie_menu_item_director_z_to_a">Director, Z-A</string>
+
+    <string name="fragment_list_tv_show_menu_item_name_a_to_z">Name, A-Z</string>
+    <string name="fragment_list_tv_show_menu_item_name_z_to_a">Name, Z-A</string>
+    <string name="fragment_list_tv_show_menu_item_year_old_to_new">Year, old to new</string>
+    <string name="fragment_list_tv_show_menu_item_year_new_to_old">Year, new to old</string>
+    <string name="fragment_list_tv_show_menu_item_seasons_more_to_less">Seasons, more to less</string>
+    <string name="fragment_list_tv_show_menu_item_seasons_less_to_more">Seasons, less to more</string>
+
 
 
 </resources>

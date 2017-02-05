@@ -2,9 +2,12 @@ package com.second.part.customlibrary.data.impl;
 
 import com.second.part.customlibrary.data.MovieData;
 import com.second.part.customlibrary.model.Movie;
+import com.second.part.customlibrary.utils.CustomLibraryConstants;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -13,7 +16,6 @@ import java.util.List;
 
 public class MovieDataMock implements MovieData {
     List<Movie> list;
-
 
     public MovieDataMock(){
         list = new ArrayList<>(Arrays.asList(
@@ -33,5 +35,66 @@ public class MovieDataMock implements MovieData {
     @Override
     public void create(Movie movie) {
         list.add(movie);
+    }
+
+    @Override
+    public List<Movie> sortData(List<Movie> movies, int optionSelected) {
+
+        switch (optionSelected){
+            case CustomLibraryConstants.SORT_MOVIE_NAME_A_TO_Z_OPTION:
+                Collections.sort(movies, new Comparator<Movie>() {
+                    @Override
+                    public int compare(Movie movie1, Movie movie2) {
+                        return movie1.getName().compareTo(movie2.getName());
+                    }
+                });
+                return movies;
+
+            case CustomLibraryConstants.SORT_MOVIE_NAME_Z_TO_A_OPTION:
+                Collections.sort(movies, new Comparator<Movie>() {
+                    @Override
+                    public int compare(Movie movie1, Movie movie2) {
+                        return movie2.getName().compareTo(movie1.getName());
+                    }
+                });
+                return movies;
+
+            case CustomLibraryConstants.SORT_MOVIE_YEAR_NEW_TO_OLD_OPTION:
+                Collections.sort(movies, new Comparator<Movie>() {
+                    @Override
+                    public int compare(Movie movie1, Movie movie2) {
+                        return movie2.getYear().compareTo(movie1.getYear());
+                    }
+                });
+                return movies;
+
+            case CustomLibraryConstants.SORT_MOVIE_YEAR_OLD_TO_NEW_OPTION:
+                Collections.sort(movies, new Comparator<Movie>() {
+                    @Override
+                    public int compare(Movie movie1, Movie movie2) {
+                        return movie1.getYear().compareTo(movie2.getYear());
+                    }
+                });
+                return movies;
+
+            case CustomLibraryConstants.SORT_MOVIE_DIRECTOR_A_TO_Z_OPTION:
+                Collections.sort(movies, new Comparator<Movie>() {
+                    @Override
+                    public int compare(Movie movie1, Movie movie2) {
+                        return movie1.getDirector().compareTo(movie2.getDirector());
+                    }
+                });
+                return movies;
+
+            case CustomLibraryConstants.SORT_MOVIE_DIRECTOR_Z_TO_A_OPTION:
+                Collections.sort(movies, new Comparator<Movie>() {
+                    @Override
+                    public int compare(Movie movie1, Movie movie2) {
+                        return movie2.getDirector().compareTo(movie1.getDirector());
+                    }
+                });
+                return movies;
+        }
+        return movies;
     }
 }

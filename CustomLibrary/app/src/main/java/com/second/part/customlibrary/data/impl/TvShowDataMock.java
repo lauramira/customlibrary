@@ -1,11 +1,14 @@
 package com.second.part.customlibrary.data.impl;
 
 import com.second.part.customlibrary.data.TvShowData;
-import com.second.part.customlibrary.model.Movie;
 import com.second.part.customlibrary.model.TvShow;
+import com.second.part.customlibrary.model.TvShow;
+import com.second.part.customlibrary.utils.CustomLibraryConstants;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -37,5 +40,67 @@ public class TvShowDataMock implements TvShowData {
     @Override
     public void create(TvShow tvShow) {
         list.add(tvShow);
+    }
+
+    @Override
+    public List<TvShow> sortData(List<TvShow> tvShows, int optionSelected) {
+
+        switch (optionSelected) {
+            case CustomLibraryConstants.SORT_TV_SHOW_NAME_A_TO_Z_OPTION:
+                Collections.sort(tvShows, new Comparator<TvShow>() {
+                    @Override
+                    public int compare(TvShow tvShow1, TvShow tvShow2) {
+                        return tvShow1.getName().compareTo(tvShow2.getName());
+                    }
+                });
+                return tvShows;
+
+            case CustomLibraryConstants.SORT_TV_SHOW_NAME_Z_TO_A_OPTION:
+                Collections.sort(tvShows, new Comparator<TvShow>() {
+                    @Override
+                    public int compare(TvShow tvShow1, TvShow tvShow2) {
+                        return tvShow2.getName().compareTo(tvShow1.getName());
+                    }
+                });
+                return tvShows;
+
+            case CustomLibraryConstants.SORT_TV_SHOW_YEAR_NEW_TO_OLD_OPTION:
+                Collections.sort(tvShows, new Comparator<TvShow>() {
+                    @Override
+                    public int compare(TvShow tvShow1, TvShow tvShow2) {
+                        return tvShow2.getStartYear().compareTo(tvShow1.getStartYear());
+                    }
+                });
+                return tvShows;
+
+            case CustomLibraryConstants.SORT_TV_SHOW_YEAR_OLD_TO_NEW_OPTION:
+                Collections.sort(tvShows, new Comparator<TvShow>() {
+                    @Override
+                    public int compare(TvShow tvShow1, TvShow tvShow2) {
+                        return tvShow1.getStartYear().compareTo(tvShow2.getStartYear());
+                    }
+                });
+                return tvShows;
+
+            case CustomLibraryConstants.SORT_TV_SHOW_SEASONS_MORE_TO_LESS:
+                Collections.sort(tvShows, new Comparator<TvShow>() {
+                    @Override
+                    public int compare(TvShow tvShow1, TvShow tvShow2) {
+                        return tvShow2.getNumSeasons().compareTo(tvShow1.getNumSeasons());
+                    }
+                });
+                return tvShows;
+
+            case CustomLibraryConstants.SORT_TV_SHOW_SEASONS_LESS_TO_MORE:
+                Collections.sort(tvShows, new Comparator<TvShow>() {
+                    @Override
+                    public int compare(TvShow tvShow1, TvShow tvShow2) {
+                        return tvShow1.getNumSeasons().compareTo(tvShow2.getNumSeasons());
+                    }
+                });
+                return tvShows;
+        }
+
+        return tvShows;
     }
 }

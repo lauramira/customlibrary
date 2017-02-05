@@ -1,6 +1,5 @@
 package com.second.part.customlibrary.data;
 
-import com.second.part.customlibrary.model.Movie;
 import com.second.part.customlibrary.model.TvShow;
 
 import java.util.List;
@@ -12,4 +11,5 @@ import java.util.List;
 public interface TvShowData {
     List<TvShow> getAll();
     void create(TvShow tvShow);
+    List<TvShow> sortData(List<TvShow> movies, int optionSelected);
 }

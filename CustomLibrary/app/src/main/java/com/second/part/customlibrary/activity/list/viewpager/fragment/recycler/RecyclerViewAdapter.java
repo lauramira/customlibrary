@@ -24,11 +24,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     private int selectedTab;
     private List<Movie> movieList;
     private List<TvShow> tvShowList;
+    private LibraryManager libraryManager;
 
     public RecyclerViewAdapter(Activity activity, int selectedTab) {
         this.activity = activity;
         this.selectedTab = selectedTab;
-        LibraryManager libraryManager =
+        libraryManager =
                 ((CustomApplication) activity.getApplication()).getLibraryManager();
         this.movieList = libraryManager.getAllMovies();
         this.tvShowList = libraryManager.getAllTvShows();
@@ -66,5 +67,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
                 return tvShowList.size();
         }
         return 0;
+    }
+
+    public void setMovieList(int sortType) {
+        this.movieList = libraryManager.sortMovies(movieList, sortType);
+        notifyDataSetChanged();
+    }
+
+    public void setTvShowList(int sortType) {
+        this.tvShowList = libraryManager.sortTvShows(tvShowList, sortType);
+        notifyDataSetChanged();
     }
 }
